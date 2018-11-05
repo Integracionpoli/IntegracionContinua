@@ -52,6 +52,8 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    
+  
     public function actions()
     {
         return [
@@ -63,6 +65,12 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+    
+    public function actionSaludo()
+    {
+        $mensaje = "Hola Mundo";
+        return $this->render('saludo',["mensaje"=> $mensaje]);
     }
 
     /**
